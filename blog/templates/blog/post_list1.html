@@ -102,24 +102,16 @@ cursor: pointer;
 		<a id="awesome" href="{% url 'add' %}">Add words to your bank!</a> <br><br>
 		<a id="awesome" href="{% url 'remove' %}">Remove words from your bank!</a> <br><br>
 		<a id="awesome" href="{% url 'view' %}">View words in your bank!</a><br><br> 
-		
+		<a id="awesome" href="{% url 'testsubmit' %}">Assessment!</a> <br><br>
 		<a id="awesome" href="{% url 'find' %}">Find words in your bank!</a>
 		</nav>
 		</p>
 		</div>
-		<div id="content">
-		<center>
-		<u><h3>Think you are an expert?</h3></u>
-		<br><p>Then test yourself to your limits, by completing this assessment!</p><br>
-		<a id="awesome" href="{% url 'testsubmit' %}">Click here to start the Assessment!</a><br><hr>
-		<br><h3>Previous Results (in assessments) :</h3><br>
-		<a id="awesome" href="{% url 'results' %}">Click here to check your previous results!</a><br><br><br><br><br><br><br><br><br><br><br><br>
-		</center>
+		<div id="content"> <!--Main content-->
 	{% else %}
 		<center id="main">
   		<p id="main1">You are not logged in</p>
-  		<a id="awesome" href="{% url 'login' %}">Login</a><br><br>
-		<a id="awesome" href="{% url 'new_account' %}">New? Create a new account</a>
+  		<a id="awesome" href="{% url 'login' %}">Login</a>
 		
 	{% endif %}
 	{% endblock %}
