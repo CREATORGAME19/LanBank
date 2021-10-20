@@ -41,3 +41,15 @@ class RemoveForm(forms.Form):
         item_number = cleaned_data.get('item_number')
         if not item_number:
             raise forms.ValidationError('You have to write something!')
+class FindForm(forms.Form):
+    find = forms.CharField(
+        max_length=20000,
+        widget=forms.Textarea(),
+    )
+
+    def clean(self):
+        cleaned_data = super(FindForm, self).clean()
+        find = cleaned_data.get('find')
+        if not find:
+            raise forms.ValidationError('You have to write something!')
+    
