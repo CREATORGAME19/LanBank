@@ -11,7 +11,7 @@ class Bank(models.Model):
     assessment_temp = models.TextField()
     assessment_type = models.TextField()
     assessment_count = models.TextField()
-    
+    assessment_results = models.TextField()
     def publish(self):
         self.save()
 
